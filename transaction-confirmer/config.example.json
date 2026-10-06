@@ -1,0 +1,154 @@
+{
+  "check_interval_seconds": 120,
+
+  "telegram": {
+    "enabled": false,
+    "bot_token": "123456789:ABCdefGHIjklMNOpqrsTUVwxyz",
+    "chat_id": "123456789"
+  },
+
+  "google_sheets": {
+    "enabled": false,
+    "credentials_file": "credentials.json",
+    "spreadsheet_id": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms",
+    "worksheet_name": "Transaksi"
+  },
+
+  "webhook": {
+    "enabled": false,
+    "url": "https://yourdomain.com/api/webhook/transaction",
+    "secret": "rahasia-opsional"
+  },
+
+  "email_accounts": [
+    {
+      "name": "Gmail BCA",
+      "email": "akun.bca.saya@gmail.com",
+      "password": "xxxx xxxx xxxx xxxx",
+      "imap_server": "imap.gmail.com",
+      "imap_port": 993,
+      "use_ssl": true,
+      "folders": ["INBOX"],
+      "banks": ["BCA"]
+    },
+    {
+      "name": "Gmail Mandiri + BRI",
+      "email": "akun.mandiri@gmail.com",
+      "password": "xxxx xxxx xxxx xxxx",
+      "imap_server": "imap.gmail.com",
+      "imap_port": 993,
+      "use_ssl": true,
+      "folders": ["INBOX"],
+      "banks": ["Mandiri", "BRI"]
+    },
+    {
+      "name": "Outlook BNI",
+      "email": "akunbni@outlook.com",
+      "password": "password-atau-app-password",
+      "imap_server": "outlook.office365.com",
+      "imap_port": 993,
+      "use_ssl": true,
+      "folders": ["INBOX"],
+      "banks": ["BNI"]
+    }
+  ],
+
+  "banks": {
+    "BCA": {
+      "allowed_senders": [
+        "kartukreditbca@klikbca.com",
+        "adminbca@klikbca.com",
+        "adminBCA@klikbca.com",
+        "noreply@bca.co.id",
+        "pasporbca@klikbca.com",
+        "informasi@klikbca.com",
+        "eStatement@klikbca.com"
+      ],
+      "keywords_credit": [
+        "dana masuk",
+        "kredit",
+        "transfer masuk",
+        "penerimaan",
+        "credit",
+        "uang masuk",
+        "saldo bertambah"
+      ]
+    },
+    "Mandiri": {
+      "allowed_senders": [
+        "noreply.livin@bankmandiri.co.id",
+        "noreply@bankmandiri.co.id",
+        "livin@bankmandiri.co.id"
+      ],
+      "keywords_credit": [
+        "dana masuk",
+        "kredit",
+        "transfer masuk",
+        "penerimaan",
+        "uang masuk"
+      ]
+    },
+    "BRI": {
+      "allowed_senders": [
+        "noreply@bri.co.id",
+        "bri@bri.co.id",
+        "notifikasi@bri.co.id",
+        "info@bri.co.id"
+      ],
+      "keywords_credit": [
+        "dana masuk",
+        "kredit",
+        "transfer masuk",
+        "penerimaan",
+        "uang masuk"
+      ]
+    },
+    "BNI": {
+      "allowed_senders": [
+        "bnicreditcard@bni.co.id",
+        "BNICreditCard@bni.co.id",
+        "noreply@bni.co.id",
+        "notifikasi@bni.co.id"
+      ],
+      "keywords_credit": [
+        "dana masuk",
+        "kredit",
+        "transfer masuk",
+        "penerimaan"
+      ]
+    },
+    "CIMB": {
+      "allowed_senders": [
+        "noreply@cimbniaga.co.id",
+        "notifikasi@cimbniaga.co.id"
+      ],
+      "keywords_credit": [
+        "dana masuk",
+        "kredit",
+        "transfer masuk"
+      ]
+    },
+    "Permata": {
+      "allowed_senders": [
+        "noreply@permatabank.com",
+        "notifikasi@permatabank.com"
+      ],
+      "keywords_credit": [
+        "dana masuk",
+        "kredit",
+        "transfer masuk"
+      ]
+    },
+    "Danamon": {
+      "allowed_senders": [
+        "noreply@danamon.co.id",
+        "notifikasi@danamon.co.id"
+      ],
+      "keywords_credit": [
+        "dana masuk",
+        "kredit",
+        "transfer masuk"
+      ]
+    }
+  }
+}
